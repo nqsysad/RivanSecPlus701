@@ -1,0 +1,122 @@
+IAM: Identity and access management
+Azure vs AWS vs google AM
+
+Task 1: Install a hybrid: IAM azure server
+
+utm - inified threat mangement
+firewall
+vpn server
+anit virus enterprise
+ip/ids
+nac: net ad control
+
+step 1: powershell
+hostname
+rename-computer iam13
+
+set-netfirewallprofile -name public,private,domain -enable false
+ncpa.cpl
+restart
+
+clik promote
+
+
+step: a secure netwoek should mirror your org chart
+
+OU         USER   globalgroup    domLocGroup
+admin        ag     adgg         corpexLG 
+SOC      you ac     scgg         socLG 
+HRD          hg,hb     hrgg         hrfLG  
+FIN          fg     figg         loanslG   
+ACCT         ab    acgg           sweldoLG
+
+TASK: 3 HOW TO BE BACKUP STRAGE
+
+DSKMGMT.MSC
+
+where to backup/store critical data:
+"rule of 3 alway save in 3 places:
+locally cloud somewher else
+1000 = 1tb
+
+type of storage:
+simple volume: default storage
+spanned volume: garbage
+raid zero: 4k video
+mirror volume: best to protect os: windows/linux
+raid 5: best to
+
+SITE BACKUP:
+BACKUP EXEC, VERITAS, VEAMM, RUBRIK
+
+BACULA
+
+PAA
+
+task 4: group policy to restrict
+no control panel
+no networks cons
+no cmd
+no storage
+
+
+task 5: fundamentals of firewall and hackings
+
+S-A-SA-E
+SEEN ACT  ESTABLISH
+
+hacker     victim
+<---------syn--->  tcp.flags.syn == 1
+           ack
+          syn/ack
+          established
+             
+MOE HACKABLE WINDOWS VS LINUS
+
+netsh wlan show profile name="3f-Rivan" key=clear
+
+nmap -sP 10.3.3.0/24
+
+nmap -v 10.3.3.181
+
+how to steal naked pix/sex vids from a windows pc: attact 129 + 445
+net use \\10.3.3.181\ipc$
+
+attack 139: net use \\10.3.3.100 \ipc$
+
+attack 445: net use x: /delete
+            net use x: \\10.3.3._\c$    
+           
+how to know if u been attack"
+netstat -n -p tcp | fidstr 445
+
+nmap -v www.fbi.gov
+
+
+
+task 7: network address translation and for port translation: nat/pat
+config t
+no access-list 8
+access-list 8 permit host 192.168.103.10
+access-list 8 permit host 192.168.103.11
+Int Gi 3
+ ip nat Inside
+Int gi 1
+ ip nat Outside
+IP Nat inside source static tcp 192.168.103.10 80 208.8.8.69 80
+IP Nat inside source static tcp 192.168.103.10 443 208.8.8.69 443
+IP Nat inside source static tcp 192.168.103.11 80 208.8.8.69 8080
+IP Nat inside source static tcp 192.168.103.11 443 208.8.8.69 8443
+ip host betlog.com 208.8.8.69
+ip host betlog.ph 208.8.8.69
+
+
+!for www.surebet22.com
+
+http://soc.rivanit.com/otrs/index.pl
+admin
+C1sc0123
+
+Ticket#2026101571000012
+
+1326 cybercrime
